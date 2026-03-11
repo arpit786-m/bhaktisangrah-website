@@ -133,8 +133,10 @@ function initSearch() {
     if (!q) { resultsList.innerHTML = ''; return; }
     const results = PRAYERS.filter(p => p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.titleHi.includes(q));
     if (results.length === 0) { resultsList.innerHTML = '<div class="search-no-results">No prayers found 🙏</div>'; return; }
+    const scriptTag = document.querySelector('script[src*="js/main.js"]');
+    const basePath = scriptTag ? scriptTag.getAttribute('src').replace('js/main.js', '') : '';
     resultsList.innerHTML = results.slice(0, 6).map(p => `
-      <a href="${p.path}" class="search-result-item" onclick="closeSearch?.()">
+      <a href="${basePath}${p.path.replace('../', '')}" class="search-result-item" onclick="closeSearch?.()">
         <span class="search-result-icon" style="color:${p.color}">🪔</span>
         <div><strong>${p.title}</strong> <span style="font-family:var(--font-hindi);font-size:0.85em;color:var(--text-muted)">${p.titleHi}</span><br/><small style="color:var(--text-muted)">${p.description}</small></div>
         <span class="card-badge badge-${p.category}" style="flex-shrink:0">${p.category}</span>
@@ -417,6 +419,8 @@ function initFavouritesPage() {
     container.innerHTML = '<div class="empty-state"><span style="font-size:4rem">🙏</span><h3>No saved prayers yet</h3><p>Click 🤍 on any prayer to save it here</p></div>';
     return;
   }
+  const scriptTag = document.querySelector('script[src*="js/main.js"]');
+  const basePath = scriptTag ? scriptTag.getAttribute('src').replace('js/main.js', '') : '';
   const matched = favs.map(id => PRAYERS.find(p => p.id === id)).filter(Boolean);
   container.innerHTML = matched.map(p => `
     <div class="prayer-card visible">
@@ -427,7 +431,7 @@ function initFavouritesPage() {
         <p style="font-family:var(--font-hindi);font-size:.9rem;color:var(--text-muted)">${p.titleHi}</p>
         <p>${p.description}</p>
       </div>
-      <div class="card-footer"><a href="${p.path}">Read Now →</a><button class="fav-btn" data-id="${p.id}">❤️</button></div>
+      <div class="card-footer"><a href="${basePath}${p.path.replace('../', '')}">Read Now →</a><button class="fav-btn" data-id="${p.id}">❤️</button></div>
     </div>`).join('');
   initFavButtons();
 }
