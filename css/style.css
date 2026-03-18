@@ -561,13 +561,17 @@ body { max-width: 100vw; }
 @media (max-width: 768px) {
   .grid-2-col > *, .feedback-flex > *, .feedback-grid-desktop > * {
     flex: 1 1 100% !important;
+    margin-bottom: 1.5rem; /* Ensure vertical gap when stacked */
+  }
+  .grid-2-col > *:last-child, .feedback-flex > *:last-child {
+    margin-bottom: 0;
   }
   .deity-gallery { display: grid; grid-template-columns: repeat(2, 1fr); }
   .section { padding: 3rem 0; }
   .hero-content { padding: 1.5rem 1rem; }
   .prayer-page > .container { padding: 1.5rem 1rem; }
   #omBtn { width: 48px; height: 48px; font-size: 1.3rem; bottom: 1.25rem; right: 1.25rem; }
-  .feedback-card { padding-bottom: 5.5rem; }
+  .feedback-card { padding: 1.5rem 1.25rem 8rem !important; } /* reduced side padding, boosted bottom */
   .hero-bg { animation: none; }
 }
 
@@ -779,9 +783,7 @@ body.festival-active .navbar { top: 44px; }
    ====================================================== */
 .section:not(:first-of-type),
 .deity-gallery,
-.youtube-cards,
-.feedback-card {
-  content-visibility: auto;
+.youtube-cards {
   contain-intrinsic-size: 0 500px;
 }
 
