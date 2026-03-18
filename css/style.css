@@ -88,7 +88,7 @@ p { color: var(--text-secondary); }
    NAVBAR
    ====================================================== */
 .navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  position: absolute; top: 0; left: 0; right: 0; z-index: 1000;
   background: var(--nav-bg);
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
@@ -99,26 +99,26 @@ p { color: var(--text-secondary); }
   box-shadow: 0 4px 30px rgba(255,107,0,0.15);
   border-bottom-color: rgba(255,107,0,0.2);
 }
-.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 58px; }
 .nav-brand { display: flex; align-items: center; gap: 0.75rem; }
 .nav-brand svg, .nav-brand .logo-icon { font-size: 2rem; }
-.brand-name { display: block; font-family: var(--font-cinzel); font-size: 1.1rem; font-weight: 700; color: var(--saffron); line-height: 1.1; }
+.brand-name { display: block; font-family: var(--font-cinzel); font-size: 1.05rem; font-weight: 700; color: var(--saffron); line-height: 1; }
 .brand-sub { display: block; font-family: var(--font-hindi); font-size: 0.78rem; color: var(--text-muted); }
-.nav-links { display: flex; align-items: center; gap: 0.2rem; }
-.nav-links a { padding: 0.5rem 0.85rem; border-radius: 8px; font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); transition: var(--transition); position: relative; }
-.nav-links a::after { content: ''; position: absolute; bottom: 4px; left: 50%; width: 0; height: 2px; background: var(--saffron); border-radius: 2px; transition: all 0.3s; transform: translateX(-50%); }
+.nav-links { display: flex; align-items: center; gap: 0.2rem; height: 100%; }
+.nav-links a { display: flex; align-items: center; height: 100%; padding: 0 0.85rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); transition: var(--transition); position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: 6px; left: 50%; width: 0; height: 2px; background: var(--saffron); border-radius: 2px; transition: all 0.3s; transform: translateX(-50%); }
 .nav-links a:hover, .nav-links a.active { color: var(--saffron); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 60%; }
 .nav-actions { display: flex; align-items: center; gap: 0.5rem; }
-.icon-btn { background: none; padding: 0.5rem; border-radius: 10px; font-size: 1.2rem; transition: var(--transition); color: var(--text-secondary); display: flex; align-items: center; justify-content: center; }
+.icon-btn { background: none; padding: 0.45rem; border-radius: 10px; font-size: 1.15rem; line-height: 1; transition: var(--transition); color: var(--text-secondary); display: flex; align-items: center; justify-content: center; }
 .icon-btn:hover { background: var(--shadow); transform: scale(1.1); }
 #hamburger, .hamburger { display: none; flex-direction: column; gap: 5px; width: 36px; height: 36px; padding: 8px; }
 #hamburger span, .hamburger span { display: block; height: 2.5px; background: var(--saffron); border-radius: 2px; transition: var(--transition); }
 
 /* Mobile Nav */
-.nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 1001; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 1200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
 .nav-overlay.show { opacity: 1; pointer-events: all; }
-.mobile-nav { position: fixed; top: 0; right: -110%; width: min(85vw,360px); height: 100vh; background: var(--bg-primary); z-index: 1002; transition: right 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: -10px 0 40px rgba(0,0,0,0.3); overflow-y: auto; }
+.mobile-nav { position: fixed; top: 0; right: -110%; width: min(85vw,360px); height: 100vh; background: var(--bg-primary); z-index: 1300; transition: right 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: -10px 0 40px rgba(0,0,0,0.3); overflow-y: auto; }
 .mobile-nav.open { right: 0; }
 .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border); }
 .mobile-nav-links { padding: 1rem; }
@@ -145,6 +145,7 @@ p { color: var(--text-secondary); }
 .hero {
   position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
   overflow: hidden;
+  padding-top: 58px; /* clear the absolute navbar */
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
@@ -621,3 +622,236 @@ section.section > .container { padding-left: 1.5rem !important; padding-right: 1
     display: flex !important;
   }
 }
+
+/* ======================================================
+   FESTIVAL BANNER (v4.0 — Dynamic)
+   ====================================================== */
+#festivalBanner {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 1100;
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.festival-banner {
+  /* Legacy class support */
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 1100;
+}
+.festival-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px; /* Increased height */
+  overflow: hidden;
+  padding: 0 0.75rem;
+}
+.festival-banner-marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: bannerScroll 28s linear infinite;
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+}
+@keyframes bannerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.festival-banner-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.festival-banner-close:hover { background: rgba(255,255,255,0.35); }
+
+/* When festival banner is visible, offset navbar */
+body.festival-active .navbar { top: 44px; }
+
+/* ======================================================
+   TRENDING CHIP ON PRAYER CARDS
+   ====================================================== */
+.trending-chip {
+  position: absolute;
+  top: 0.7rem; left: 0.7rem;
+  background: linear-gradient(135deg, #FF4500, #FF6B00);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(255,69,0,0.4);
+  letter-spacing: 0.04em;
+  z-index: 2;
+  animation: trendPop 2.5s ease-in-out infinite;
+}
+@keyframes trendPop {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+/* ======================================================
+   FESTIVAL BADGE IN MANTRA WIDGET
+   ====================================================== */
+.mantra-festival-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.3); }
+  50%       { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+}
+
+/* Festival-active calendar value highlight */
+.cal-festival-active {
+  font-family: var(--font-hindi);
+  font-weight: 700;
+  color: #C00;
+  font-size: 1.05rem;
+  animation: calGlow 2s ease-in-out infinite;
+}
+[data-theme="dark"] .cal-festival-active { color: #FF8C38; }
+@keyframes calGlow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.75; }
+}
+
+/* ======================================================
+   PERFORMANCE — content-visibility for below-fold
+   ====================================================== */
+.section:not(:first-of-type),
+.deity-gallery,
+.youtube-cards,
+.feedback-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* ======================================================
+   PREMIUM TODAYS PRAYER WIDGET — mandala bg animation
+   ====================================================== */
+.todays-prayer-widget {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.8s ease;
+}
+.todays-prayer-widget::after {
+  content: '🕉️';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  opacity: 0.05;
+  pointer-events: none;
+  animation: mandalaRotate 30s linear infinite;
+  line-height: 1;
+}
+@keyframes mandalaRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ======================================================
+   PRAYER CARD DEITY-COLORED GLOW ON HOVER (richer)
+   Uses data-color attr set by JS dynamically
+   ====================================================== */
+.prayer-card:hover {
+  box-shadow: 0 24px 60px rgba(255,107,0,0.22);
+}
+
+/* ======================================================
+   ACCESSIBILITY — visually hidden utility
+   ====================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* ======================================================
+   SMOOTH VIEW TRANSITION (modern browsers)
+   Removed to prevent AbortError console noise
+   ====================================================== */
+
+/* ======================================================
+   BADGE TYPES — All categories
+   ====================================================== */
+.card-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+.badge-aarti   { background: #FF6B0022; color: #FF6B00; }
+.badge-chalisa { background: #FF8C3822; color: #D06800; }
+.badge-mantra  { background: #2E7D3222; color: #1B5E20; }
+.badge-stotra  { background: #1A6BB522; color: #0D47A1; }
+.badge-bhajan  { background: #1565C022; color: #0D47A1; }
+.badge-stuti   { background: #C6282822; color: #B71C1C; }
+.badge-pooja   { background: #E6510022; color: #BF360C; }
+
+/* ======================================================
+   CATEGORY CARDS — 7-col responsive grid
+   ====================================================== */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+}
+@media (max-width: 600px) {
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ======================================================
+   NEW PRAYERS SECTION — shimmer "NEW" micro-badge
+   ====================================================== */
+.badge-new {
+  display: inline-block;
+  background: linear-gradient(90deg, #FF6B00, #FFD700, #FF6B00);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerBadge 2.5s linear infinite;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+@keyframes shimmerBadge {
+  to { background-position: 200% center; }
+}
+
+
