@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Stotra — स्तोत्र संग्रह | Bhakti Sangrah</title>
+  <meta name="description" content="Read complete Stotra lyrics in Hindi and English. Free devotional stotra collection on Bhakti Sangrah."/>
+  <link rel="canonical" href="https://bhaktisangrah.site/pages/stotra.html"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>"/>
+</head>
+<body>
+<div id="festivalBanner" style="display:none"></div>
+<nav class="navbar"><div class="container">
+  <a href="../index.html" class="nav-brand">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#FF6B00" opacity=".15"/><text x="18" y="24" text-anchor="middle" font-size="18" fill="#FF6B00" font-family="serif">ॐ</text></svg>
+    <div><span class="brand-name">Bhakti Sangrah</span><span class="brand-sub">भक्ति संग्रह</span></div>
+  </a>
+  <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../pages/aarti.html">Aarti</a></li><li><a href="../pages/chalisa.html">Chalisa</a></li><li><a href="../pages/mantra.html">Mantra</a></li><li><a href="../pages/stotra.html" class="active">Stotra</a></li><li><a href="../pages/bhajan.html">Bhajan</a></li><li><a href="../pages/stuti.html">Stuti</a></li><li><a href="../pages/pooja.html">Pooja Path</a></li><li><a href="../pages/popular.html">Popular</a></li><li><a href="../pages/favourites.html">Favourites</a></li><li><a href="../pages/about.html">About</a></li></ul>
+  <div class="nav-actions">
+    <button class="icon-btn theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button class="icon-btn open-search" aria-label="Open search">🔍</button>
+    <button class="icon-btn" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</div></nav>
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header"><span style="font-family:var(--font-serif);color:var(--saffron)">ॐ Menu</span><button class="icon-btn" id="closeNav">&#x2715;</button></div>
+  <ul class="mobile-nav-links"><li><a href="../index.html">🏠 Home</a></li><li><a href="../pages/aarti.html">🪔 Aarti</a></li><li><a href="../pages/chalisa.html">🙏 Chalisa</a></li><li><a href="../pages/mantra.html">🕉️ Mantra</a></li><li><a href="../pages/stotra.html" class="active">📿 Stotra</a></li><li><a href="../pages/bhajan.html">🎵 Bhajan</a></li><li><a href="../pages/stuti.html">🙌 Stuti</a></li><li><a href="../pages/pooja.html">🌸 Pooja Path</a></li><li><a href="../pages/popular.html">⭐ Popular</a></li><li><a href="../pages/favourites.html">❤️ Favourites</a></li><li><a href="../pages/about.html">ℹ️ About</a></li></ul>
+</div>
+<div class="search-overlay" id="searchOverlay"><div class="search-modal"><div class="search-modal-inner"><div class="search-modal-input"><span>🔍</span><input type="text" id="searchInput" placeholder="Search..." autocomplete="off"/><button class="icon-btn" id="closeSearch">&#x2715;</button></div></div><div class="search-results-list" id="searchResultsList"></div></div></div>
+
+<div class="page-hero">
+  <span class="page-hero-icon">📿</span>
+  <h1 style="font-family:var(--font-cinzel)">Stotra</h1>
+  <p style="font-family:var(--font-hindi);font-size:1.3rem">स्तोत्र संग्रह</p>
+</div>
+<section class="section"><div class="container">
+  <div class="section-header"><h2>Stotra Collection</h2><div class="divider"></div><p>Complete Stotra lyrics in Hindi and English</p></div>
+  <div id="listingGrid" class="cards-grid"></div>
+</div></section>
+<footer class="footer"><div class="container">
+  <div class="footer-grid"><div class="footer-brand"><div class="brand-name">Bhakti Sangrah</div><p>🙏 Free devotional resource</p></div><div class="footer-col"><h4>Categories</h4><a href="aarti.html">Aarti</a><a href="chalisa.html">Chalisa</a><a href="mantra.html">Mantra</a></div><div class="footer-col"><h4>More</h4><a href="pooja.html">Pooja Path</a><a href="popular.html">Popular</a></div></div>
+  <div class="footer-bottom"><p>&#169; 2026 Bhakti Sangrah 🙏</p></div>
+</div></footer>
+<button id="omBtn" title="Om Meditation">ॐ</button>
+<script src="../js/festival-calendar.js" defer></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // We need a slight timeout to ensure main.js has parsed and defined PRAYERS if it was deferred
+  setTimeout(() => {
+    const g = document.getElementById('listingGrid');
+    if (!g) return;
+    
+    const pages = (typeof PRAYERS !== 'undefined') ? PRAYERS.filter(p => p.category === 'stotra') : [];
+    
+    if (!pages.length) {
+      g.innerHTML = '<p style="text-align:center;color:var(--text-muted)">More coming soon!</p>';
+      return;
+    }
+    
+    g.innerHTML = pages.map(p => `
+      <div class="prayer-card visible">
+        <div class="card-thumb" style="background:linear-gradient(135deg,${p.color}22,${p.color}55);font-size:3rem;display:flex;align-items:center;justify-content:center">
+          📿
+        </div>
+        <div class="card-body">
+          <span class="card-badge badge-${p.category}">${p.category}</span>
+          <h3>${p.title}</h3>
+          <p style="font-family:var(--font-hindi);font-size:0.9rem;color:var(--saffron)">${p.titleHi || ''}</p>
+          <p>${p.description}</p>
+        </div>
+        <div class="card-footer">
+          <a href="../prayers/${p.category}/${p.id}.html">Read Now &rarr;</a>
+          <button class="fav-btn" data-id="${p.id}">${(typeof isFavourite !== 'undefined' && isFavourite(p.id)) ? '❤️' : '🤍'}</button>
+        </div>
+      </div>
+    `).join('');
+    if (typeof initFavButtons === 'function') initFavButtons();
+  }, 50);
+});
+</script>
+</body></html>

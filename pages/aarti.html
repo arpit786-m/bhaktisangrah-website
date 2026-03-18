@@ -1,10 +1,27 @@
 ﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aarti Sangrah — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti | Bhakti Sangrah</title>
-  <meta name="description" content="Read Ganesh Aarti, Shiv Aarti, Lakshmi Aarti, Durga Aarti lyrics in Hindi and English. Complete Aarti collection online." />
-  <meta name="keywords" content="Hindu Prayers, Aarti, Chalisa, Mantra, Bhakti Sangrah" />
+  <meta charset="UTF-8" />
+  <!-- Performance: preconnect to font servers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.youtube.com" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarti Lyrics in Hindi — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti | Bhakti Sangrah</title>
+
+  <!-- Canonical & Open Graph Tags -->
+  <link rel="canonical" href="https://bhaktisangrah.site/pages/aarti.html" />
+  <meta property="og:title" content="Aarti Lyrics in Hindi — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti | Bhakti Sangrah" />
+  <meta property="og:description" content="📖 Complete Aarti collection — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti, Durga Aarti, Hanuman Aarti and 15+ more. Read full aarti lyrics in Hindi & English. Clean, ad-free." />
+  <meta property="og:url" content="https://bhaktisangrah.site/pages/aarti.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta property="og:site_name" content="Bhakti Sangrah" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aarti Lyrics in Hindi — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti | Bhakti Sangrah" />
+  <meta name="twitter:description" content="📖 Complete Aarti collection — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti, Durga Aarti, Hanuman Aarti and 15+ more. Read full aarti lyrics in Hindi & English. Clean, ad-free." />
+  <meta name="twitter:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta name="description" content="📖 Complete Aarti collection — Ganesh Aarti, Shiv Aarti, Lakshmi Aarti, Durga Aarti, Hanuman Aarti and 15+ more. Read full aarti lyrics in Hindi & English. Clean, ad-free." />
+  <meta name="keywords" content="Aarti lyrics Hindi, Ganesh Aarti, Shiv Aarti, Lakshmi Aarti, Durga Aarti, Aarti sangrah" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
 
@@ -35,29 +52,22 @@
   </script>
 </head>
 <body>
+<!-- Festival Banner (above everything) -->
+<div id="festivalBanner" role="banner" aria-label="Festival announcement" style="display:none;"></div>
+
 <nav class="navbar"><div class="container">
   <a href="../index.html" class="nav-brand"><span class="logo-icon">🕉️</span><div><span class="brand-name">Bhakti Sangrah</span><span class="brand-sub">भक्ति संग्रह</span></div></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li><li><a href="aarti.html" class="active">Aarti</a></li>
-    <li><a href="chalisa.html">Chalisa</a></li><li><a href="mantra.html">Mantra</a></li>
-    <li><a href="pooja.html">Pooja Path</a></li><li><a href="popular.html">Popular</a></li>
-    <li><a href="favourites.html">Favourites</a></li><li><a href="about.html">About</a></li>
-  </ul>
+  <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../pages/aarti.html" class="active">Aarti</a></li><li><a href="../pages/chalisa.html">Chalisa</a></li><li><a href="../pages/mantra.html">Mantra</a></li><li><a href="../pages/stotra.html">Stotra</a></li><li><a href="../pages/bhajan.html">Bhajan</a></li><li><a href="../pages/stuti.html">Stuti</a></li><li><a href="../pages/pooja.html">Pooja Path</a></li><li><a href="../pages/popular.html">Popular</a></li><li><a href="../pages/favourites.html">Favourites</a></li><li><a href="../pages/about.html">About</a></li></ul>
   <div class="nav-actions">
-    <button class="icon-btn theme-toggle" title="Toggle dark mode">🌙</button>
-    <button class="icon-btn open-search" title="Search">🔍</button>
-    <button class="icon-btn" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="icon-btn theme-toggle" title="Toggle dark mode" aria-label="Toggle dark/light theme">🌙</button>
+    <button class="icon-btn open-search" title="Search" aria-label="Open search">🔍</button>
+    <button class="icon-btn" id="hamburger" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
   </div>
 </div></nav>
 <div class="nav-overlay" id="navOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-header"><span style="font-family:var(--font-serif);color:var(--saffron)">🕉️ Menu</span><button class="icon-btn" id="closeNav">✕</button></div>
-  <ul class="mobile-nav-links">
-    <li><a href="../index.html">🏠 Home</a></li><li><a href="aarti.html" class="active">🪔 Aarti</a></li>
-    <li><a href="chalisa.html">🙏 Chalisa</a></li><li><a href="mantra.html">🕉️ Mantra</a></li>
-    <li><a href="pooja.html">🌸 Pooja Path</a></li><li><a href="popular.html">⭐ Popular</a></li>
-    <li><a href="favourites.html">❤️ Favourites</a></li><li><a href="about.html">ℹ️ About</a></li>
-  </ul>
+  <ul class="mobile-nav-links"><li><a href="../index.html">🏠 Home</a></li><li><a href="../pages/aarti.html" class="active">🪔 Aarti</a></li><li><a href="../pages/chalisa.html">🙏 Chalisa</a></li><li><a href="../pages/mantra.html">🕉️ Mantra</a></li><li><a href="../pages/stotra.html">📿 Stotra</a></li><li><a href="../pages/bhajan.html">🎵 Bhajan</a></li><li><a href="../pages/stuti.html">🙌 Stuti</a></li><li><a href="../pages/pooja.html">🌸 Pooja Path</a></li><li><a href="../pages/popular.html">⭐ Popular</a></li><li><a href="../pages/favourites.html">❤️ Favourites</a></li><li><a href="../pages/about.html">ℹ️ About</a></li></ul>
 </div>
 <div class="search-overlay" id="searchOverlay"><div class="search-modal"><div class="search-modal-inner"><div class="search-modal-input"><span>🔍</span><input type="text" id="searchInput" placeholder="Search prayers..." autocomplete="off" /><button class="icon-btn" id="closeSearch">✕</button></div></div><div class="search-results-list" id="searchResultsList"></div></div></div>
 
@@ -76,135 +86,45 @@
       <div class="divider"></div>
       <p>Sing praises to the divine — आरती गाइए, मन को पाइए</p>
     </div>
-    <div class="cards-grid">
-      <!-- Ganesh -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#FF8C3822,#FF8C3866);position:relative"><img src="../images/ganesha.png" alt="Ganesha" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45"><span style="position:relative;z-index:1;font-size:2.5rem">🙏</span></div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Ganesh Aarti</h3><p style="font-family:var(--font-hindi)">जय गणेश जय गणेश देवा</p><p>Auspicious prayer to the remover of obstacles</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/ganesh-aarti.html">Read Now →</a><button class="fav-btn" data-id="ganesh-aarti">🤍</button></div>
-      </div>
-      <!-- Ganpati -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#FF8C3822,#FF6B0044)">🙌</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Ganpati Ji Ki Aarti</h3><p style="font-family:var(--font-hindi)">गणपति की सेवा मंगल मेवा</p><p>Ancient Braj Bhasha Aarti to Lord Ganesha</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/ganpati-aarti.html">Read Now →</a><button class="fav-btn" data-id="ganpati-aarti">🤍</button></div>
-      </div>
-      <!-- Shiv -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#1A6BB522,#1A6BB566);position:relative"><img src="../images/shiva.png" alt="Shiv" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45"><span style="position:relative;z-index:1;font-size:2.5rem">🔱</span></div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Shiv Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय शिव ओंकारा</p><p>Most beloved Aarti to Lord Mahadeva</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/shiv-aarti.html">Read Now →</a><button class="fav-btn" data-id="shiv-aarti">🤍</button></div>
-      </div>
-      <!-- Jagdish -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#6A1B9A22,#6A1B9A66)">🪔</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Jagdish Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय जगदीश हरे</p><p>Universally sung Aarti to Lord Vishnu/Jagdish</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/jagdish-aarti.html">Read Now →</a><button class="fav-btn" data-id="jagdish-aarti">🤍</button></div>
-      </div>
-      <!-- Lakshmi -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#F5A62322,#F5A62366);position:relative"><img src="../images/lakshmi.png" alt="Lakshmi" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45"><span style="position:relative;z-index:1;font-size:2.5rem">🪷</span></div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Lakshmi Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय लक्ष्मी माता</p><p>Aarti for wealth, peace and prosperity</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/lakshmi-aarti.html">Read Now →</a><button class="fav-btn" data-id="lakshmi-aarti">🤍</button></div>
-      </div>
-      <!-- Durga -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#C6282822,#C6282866);position:relative"><img src="../images/durga.png" alt="Durga" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45"><span style="position:relative;z-index:1;font-size:2.5rem">🌺</span></div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Durga Aarti</h3><p style="font-family:var(--font-hindi)">जय अम्बे गौरी</p><p>Powerful Aarti to Goddess Durga Bhavani</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/durga-aarti.html">Read Now →</a><button class="fav-btn" data-id="durga-aarti">🤍</button></div>
-      </div>
-      <!-- Hanuman -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#FF6B0022,#FF6B0066)">🙏</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Hanuman Aarti</h3><p style="font-family:var(--font-hindi)">आरती कीजै हनुमान लला की</p><p>Devotional Aarti to Lord Bajrangbali</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/hanuman-aarti.html">Read Now →</a><button class="fav-btn" data-id="hanuman-aarti">🤍</button></div>
-      </div>
-      <!-- Balaji -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#BF360C22,#BF360C66)">🛕</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Balaji Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय हनुमत वीरा</p><p>Mehandipur Balaji Aarti for protection</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/balaji-aarti.html">Read Now →</a><button class="fav-btn" data-id="balaji-aarti">🤍</button></div>
-      </div>
-      <!-- Kali Maa -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#88003F22,#4A148C44)">⚔️</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Kali Maa Aarti</h3><p style="font-family:var(--font-hindi)">अम्बे तू है जगदम्बे काली</p><p>Fierce protective Aarti to Goddess Kali</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/kali-maa-aarti.html">Read Now →</a><button class="fav-btn" data-id="kali-maa-aarti">🤍</button></div>
-      </div>
-      <!-- Pretraj Sarkar -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#4A148C22,#311B9244)">🪔</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Pretraj Sarkar Aarti</h3><p style="font-family:var(--font-hindi)">जय जय प्रेतराज सरकार</p><p>Aarti to the protector deity of Mehandipur</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/pretraj-aarti.html">Read Now →</a><button class="fav-btn" data-id="pretraj-aarti">🤍</button></div>
-      </div>
-      <!-- Bhairav -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#B71C1C22,#4A148C44)">🔱</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Bhairav Kotwal Aarti</h3><p style="font-family:var(--font-hindi)">जय जय भैरव कोतवाल</p><p>Aarti to Lord Bhairav — Guardian of Kashi</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/bhairav-aarti.html">Read Now →</a><button class="fav-btn" data-id="bhairav-aarti">🤍</button></div>
-      </div>
-      <!-- Ganga -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#0097A722,#00606444)">🌊</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Ganga Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय गंगे माता</p><p>Sacred Aarti of Mother Ganga performed at ghats</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/ganga-aarti.html">Read Now →</a><button class="fav-btn" data-id="ganga-aarti">🤍</button></div>
-      </div>
-      <!-- Saraswati -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#0288D122,#0288D166)">🦢</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Saraswati Aarti</h3><p style="font-family:var(--font-hindi)">जय सरस्वती माता</p><p>Prayer to the Goddess of Knowledge and Arts</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/saraswati-aarti.html">Read Now →</a><button class="fav-btn" data-id="saraswati-aarti">🤍</button></div>
-      </div>
-      <!-- Balkrishna -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#28359322,#1565C044)">🪈</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Balkrishna Aarti</h3><p style="font-family:var(--font-hindi)">आरती बालकृष्ण की कीजै</p><p>Sweet Braj Bhasha Aarti to infant Lord Krishna</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/balkrishna-aarti.html">Read Now →</a><button class="fav-btn" data-id="balkrishna-aarti">🤍</button></div>
-      </div>
-      <!-- Kunj Bihari Krishna -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#1565C022,#0D47A166)">🦚</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Kunj Bihari Aarti</h3><p style="font-family:var(--font-hindi)">आरती कुन्ज बिहारी की</p><p>Devotional Aarti to Lord Krishna of Vrindavan</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/krishna-aarti.html">Read Now →</a><button class="fav-btn" data-id="krishna-aarti">🤍</button></div>
-      </div>
-      <!-- Gayatri -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#F57F1722,#FF6F0044)">☀️</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Gayatri Mata Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय गायत्री माता</p><p>Aarti to the mother of all Vedic mantras</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/gayatri-aarti.html">Read Now →</a><button class="fav-btn" data-id="gayatri-aarti">🤍</button></div>
-      </div>
-      <!-- Shani Dev -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#26323822,#37474F66)">🪐</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Shani Dev Aarti</h3><p style="font-family:var(--font-hindi)">जय जय श्री शनिदेव</p><p>Auspicious Aarti to Lord Shani on Saturdays</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/shani-dev-aarti.html">Read Now →</a><button class="fav-btn" data-id="shani-dev-aarti">🤍</button></div>
-      </div>
-      <!-- Khatu Shyam -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#1B5E2022,#2E7D3266)">🏵️</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Khatu Shyam Aarti</h3><p style="font-family:var(--font-hindi)">ॐ जय श्री श्याम हरे</p><p>Aarti to Shyam Baba — help of the helpless</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/shyam-baba-aarti.html">Read Now →</a><button class="fav-btn" data-id="shyam-baba-aarti">🤍</button></div>
-      </div>
-      <!-- Sai Baba -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#E6510022,#BF360C44)">🕯️</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Sai Baba Aarti</h3><p style="font-family:var(--font-hindi)">आरती श्री साई गुरुवर की</p><p>Devotional Aarti to Shirdi Sai Baba</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/sai-baba-aarti.html">Read Now →</a><button class="fav-btn" data-id="sai-baba-aarti">🤍</button></div>
-      </div>
-      <!-- Santoshi Maa -->
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#FFD70022,#FFA00044)">🌼</div>
-        <div class="card-body"><span class="card-badge badge-aarti">Aarti</span><h3>Santoshi Maa Aarti</h3><p style="font-family:var(--font-hindi)">जय संतोषी माता</p><p>Friday Aarti to Goddess of Contentment</p></div>
-        <div class="card-footer"><a href="../prayers/aarti/santoshi-maa-aarti.html">Read Now →</a><button class="fav-btn" data-id="santoshi-maa-aarti">🤍</button></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div id="listingGrid" class="cards-grid"></div>
+</div></section>
 
 
 
-<script src="../js/nav.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/festival-calendar.js" defer></script>
+  <script src="../js/main.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const g = document.getElementById('listingGrid');
+    if (!g) return;
+    const pages = (typeof PRAYERS !== 'undefined') ? PRAYERS.filter(p => p.category === 'aarti') : [];
+    if (!pages.length) {
+      g.innerHTML = '<p style="text-align:center;color:var(--text-muted)">More coming soon!</p>';
+      return;
+    }
+    g.innerHTML = pages.map(p => `
+      <div class="prayer-card visible">
+        <div class="card-thumb" style="background:linear-gradient(135deg,${p.color}22,${p.color}55);font-size:3rem;display:flex;align-items:center;justify-content:center">
+          🪔
+        </div>
+        <div class="card-body">
+          <span class="card-badge badge-${p.category}">${p.category}</span>
+          <h3>${p.title}</h3>
+          <p style="font-family:var(--font-hindi);font-size:0.9rem;color:var(--saffron)">${p.titleHi || ''}</p>
+          <p>${p.description}</p>
+        </div>
+        <div class="card-footer">
+          <a href="../prayers/${p.category}/${p.id}.html">Read Now &rarr;</a>
+          <button class="fav-btn" data-id="${p.id}">${(typeof isFavourite !== 'undefined' && isFavourite(p.id)) ? '❤️' : '🤍'}</button>
+        </div>
+      </div>
+    `).join('');
+    if (typeof initFavButtons === 'function') initFavButtons();
+  }, 50);
+});
+</script>
 </body></html>
 
 

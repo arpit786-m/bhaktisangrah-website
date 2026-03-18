@@ -35,6 +35,9 @@
     { href: root + 'pages/aarti.html', label: 'Aarti', icon: '🪔' },
     { href: root + 'pages/chalisa.html', label: 'Chalisa', icon: '🙏' },
     { href: root + 'pages/mantra.html', label: 'Mantra', icon: '🕉️' },
+    { href: root + 'pages/stotra.html', label: 'Stotra', icon: '📿' },
+    { href: root + 'pages/bhajan.html', label: 'Bhajan', icon: '🎵' },
+    { href: root + 'pages/stuti.html', label: 'Stuti', icon: '🙌' },
     { href: root + 'pages/pooja.html', label: 'Pooja Path', icon: '🌸' },
     { href: root + 'pages/popular.html', label: 'Popular', icon: '⭐' },
     { href: root + 'pages/favourites.html', label: 'Favourites', icon: '❤️' },
@@ -53,13 +56,13 @@
     nav.innerHTML = `<div class="container">
       <a href="${root}index.html" class="nav-brand">
         <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" fill="#FF6B00" opacity=".15"/><text x="19" y="26" text-anchor="middle" font-size="20" fill="#FF6B00" font-family="serif">ॐ</text></svg>
-        <div><span class="brand-name">Bhakti Sangrah</span><span class="brand-sub">भक्ति संग्रह</span></div>
+        <div><span class="brand-name">Bhakti Sangrah</span></div>
       </a>
       <ul class="nav-links">${navLinksHTML}</ul>
       <div class="nav-actions">
-        <button class="icon-btn theme-toggle" title="Toggle theme">🌙</button>
-        <button class="icon-btn open-search" title="Search (Ctrl+K)">🔍</button>
-        <button class="icon-btn" id="hamburger" title="Menu"><span></span><span></span><span></span></button>
+        <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle dark and light theme">🌙</button>
+        <button class="icon-btn open-search" title="Search (Ctrl+K)" aria-label="Open search modal">🔍</button>
+        <button class="icon-btn" id="hamburger" title="Menu" aria-label="Open mobile navigation"><span></span><span></span><span></span></button>
       </div>
     </div>`;
     document.body.insertBefore(nav, document.body.firstChild);
@@ -81,7 +84,7 @@
     mob.className = 'mobile-nav'; mob.id = 'mobileNav';
     mob.innerHTML = `<div class="mobile-nav-header">
       <span style="font-family:var(--font-cinzel);color:var(--saffron)">ॐ Bhakti Sangrah</span>
-      <button class="icon-btn" id="closeNav">✕</button>
+      <button class="icon-btn" id="closeNav" aria-label="Close mobile navigation">✕</button>
     </div>
     <ul class="mobile-nav-links">${mobileLinksHTML}</ul>`;
     document.body.insertBefore(mob, document.body.children[2]);
@@ -93,8 +96,8 @@
     so.className = 'search-overlay'; so.id = 'searchOverlay';
     so.innerHTML = `<div class="search-modal"><div class="search-modal-inner"><div class="search-modal-input">
       <span>🔍</span>
-      <input type="text" id="searchInput" placeholder="Search Aarti, Chalisa, Mantra..." autocomplete="off" />
-      <button class="icon-btn" id="closeSearch">✕</button>
+      <input type="text" id="searchInput" placeholder="Search Aarti, Chalisa, Mantra..." autocomplete="off" aria-label="Search prayers input" />
+      <button class="icon-btn" id="closeSearch" aria-label="Close search modal">✕</button>
     </div></div><div class="search-results-list" id="searchResultsList"></div></div>`;
     document.body.appendChild(so);
   }

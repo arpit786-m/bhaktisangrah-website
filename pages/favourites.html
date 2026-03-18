@@ -1,10 +1,27 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Favourites — Saved Prayers | Bhakti Sangrah</title>
-  <meta name="description" content="Your saved favourite Hindu prayers — Aarti, Chalisa, Mantra bookmarks." />
-  <meta name="keywords" content="Hindu Prayers, Aarti, Chalisa, Mantra, Bhakti Sangrah" />
+  <meta charset="UTF-8" />
+  <!-- Performance: preconnect to font servers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.youtube.com" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favourite Prayers — Save Your Favourite Aarti & Chalisa | Bhakti Sangrah</title>
+
+  <!-- Canonical & Open Graph Tags -->
+  <link rel="canonical" href="https://bhaktisangrah.site/pages/favourites.html" />
+  <meta property="og:title" content="My Favourite Prayers — Save Your Favourite Aarti & Chalisa | Bhakti Sangrah" />
+  <meta property="og:description" content="Save and access your favourite Hindu prayers anytime. Bookmark Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra and more for quick daily reading." />
+  <meta property="og:url" content="https://bhaktisangrah.site/pages/favourites.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta property="og:site_name" content="Bhakti Sangrah" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Favourite Prayers — Save Your Favourite Aarti & Chalisa | Bhakti Sangrah" />
+  <meta name="twitter:description" content="Save and access your favourite Hindu prayers anytime. Bookmark Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra and more for quick daily reading." />
+  <meta name="twitter:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta name="description" content="Save and access your favourite Hindu prayers anytime. Bookmark Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra and more for quick daily reading." />
+  <meta name="keywords" content="save favourite prayers, bookmark aarti chalisa, my prayers, bhakti sangrah favourites" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
 
@@ -35,29 +52,22 @@
   </script>
 </head>
 <body>
+<!-- Festival Banner (above everything) -->
+<div id="festivalBanner" role="banner" aria-label="Festival announcement" style="display:none;"></div>
+
 <nav class="navbar"><div class="container">
-  <a href="../index.html" class="nav-brand"><span class="logo-icon">🕉️</span><div><span class="brand-name">Bhakti Sangrah</span><span class="brand-sub">भक्ति संग्रह</span></div></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li><li><a href="aarti.html">Aarti</a></li>
-    <li><a href="chalisa.html">Chalisa</a></li><li><a href="mantra.html">Mantra</a></li>
-    <li><a href="pooja.html">Pooja Path</a></li><li><a href="popular.html">Popular</a></li>
-    <li><a href="favourites.html" class="active">Favourites</a></li><li><a href="about.html">About</a></li>
-  </ul>
+  <a href="../index.html" class="nav-brand"><span class="logo-icon">🕉️</span><div><span class="brand-name">Bhakti Sangrah</span></div></a>
+  <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../pages/aarti.html">Aarti</a></li><li><a href="../pages/chalisa.html">Chalisa</a></li><li><a href="../pages/mantra.html">Mantra</a></li><li><a href="../pages/stotra.html">Stotra</a></li><li><a href="../pages/bhajan.html">Bhajan</a></li><li><a href="../pages/stuti.html">Stuti</a></li><li><a href="../pages/pooja.html">Pooja Path</a></li><li><a href="../pages/popular.html">Popular</a></li><li><a href="../pages/favourites.html">Favourites</a></li><li><a href="../pages/about.html">About</a></li></ul>
   <div class="nav-actions">
-    <button class="icon-btn theme-toggle">🌙</button>
-    <button class="icon-btn open-search">🔍</button>
-    <button class="icon-btn" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="icon-btn theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+    <button class="icon-btn open-search" aria-label="Open search">🔍</button>
+    <button class="icon-btn" id="hamburger" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
   </div>
 </div></nav>
 <div class="nav-overlay" id="navOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-header"><span style="font-family:var(--font-serif);color:var(--saffron)">🕉️ Menu</span><button class="icon-btn" id="closeNav">✕</button></div>
-  <ul class="mobile-nav-links">
-    <li><a href="../index.html">🏠 Home</a></li><li><a href="aarti.html">🪔 Aarti</a></li>
-    <li><a href="chalisa.html">🙏 Chalisa</a></li><li><a href="mantra.html">🕉️ Mantra</a></li>
-    <li><a href="pooja.html">🌸 Pooja Path</a></li><li><a href="popular.html">⭐ Popular</a></li>
-    <li><a href="favourites.html" class="active">❤️ Favourites</a></li><li><a href="about.html">ℹ️ About</a></li>
-  </ul>
+  <ul class="mobile-nav-links"><li><a href="../index.html">🏠 Home</a></li><li><a href="../pages/aarti.html">🪔 Aarti</a></li><li><a href="../pages/chalisa.html">🙏 Chalisa</a></li><li><a href="../pages/mantra.html">🕉️ Mantra</a></li><li><a href="../pages/stotra.html">📿 Stotra</a></li><li><a href="../pages/bhajan.html">🎵 Bhajan</a></li><li><a href="../pages/stuti.html">🙌 Stuti</a></li><li><a href="../pages/pooja.html">🌸 Pooja Path</a></li><li><a href="../pages/popular.html">⭐ Popular</a></li><li><a href="../pages/favourites.html">❤️ Favourites</a></li><li><a href="../pages/about.html">ℹ️ About</a></li></ul>
 </div>
 <div class="search-overlay" id="searchOverlay"><div class="search-modal"><div class="search-modal-inner"><div class="search-modal-input"><span>🔍</span><input type="text" id="searchInput" placeholder="Search prayers..." autocomplete="off" /><button class="icon-btn" id="closeSearch">✕</button></div></div><div class="search-results-list" id="searchResultsList"></div></div></div>
 
@@ -84,8 +94,9 @@
 
 
 
-<script src="../js/nav.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/festival-calendar.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </body></html>
 
 

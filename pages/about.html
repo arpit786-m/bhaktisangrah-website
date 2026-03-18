@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Bhakti Sangrah — Hindu Devotional Prayer Website</title>
-  <meta name="description" content="About Bhakti Sangrah — A free digital platform for reading Hindu Aarti, Chalisa, Mantra and Pooja Path online in Hindi and English." />
-  <meta name="keywords" content="Hindu Prayers, Aarti, Chalisa, Mantra, Bhakti Sangrah" />
+  <meta charset="UTF-8" />
+  <!-- Performance: preconnect to font servers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.youtube.com" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Bhakti Sangrah — Free Hindu Devotional Prayer Website | भक्ति संग्रह</title>
+
+  <!-- Canonical & Open Graph Tags -->
+  <link rel="canonical" href="https://bhaktisangrah.site/pages/about.html" />
+  <meta property="og:title" content="About Bhakti Sangrah — Free Hindu Devotional Prayer Website | भक्ति संग्रह" />
+  <meta property="og:description" content="Bhakti Sangrah is India's clean, ad-free devotional website. Read Aarti, Chalisa, Mantra in Hindi & English. Our mission: make sacred prayers accessible to all." />
+  <meta property="og:url" content="https://bhaktisangrah.site/pages/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta property="og:site_name" content="Bhakti Sangrah" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Bhakti Sangrah — Free Hindu Devotional Prayer Website | भक्ति संग्रह" />
+  <meta name="twitter:description" content="Bhakti Sangrah is India's clean, ad-free devotional website. Read Aarti, Chalisa, Mantra in Hindi & English. Our mission: make sacred prayers accessible to all." />
+  <meta name="twitter:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta name="description" content="Bhakti Sangrah is India's clean, ad-free devotional website. Read Aarti, Chalisa, Mantra in Hindi & English. Our mission: make sacred prayers accessible to all." />
+  <meta name="keywords" content="about bhakti sangrah, free devotional website India, Hindu prayer website, aarti chalisa mantra online" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
 
@@ -35,6 +52,9 @@
   </script>
 </head>
 <body>
+<!-- Festival Banner (above everything) -->
+<div id="festivalBanner" role="banner" aria-label="Festival announcement" style="display:none;"></div>
+
 
 <section class="page-hero" style="background:linear-gradient(135deg,#FF6B00,#F5A623)">
   <div class="container" style="position:relative;z-index:2">
@@ -60,7 +80,7 @@
     <!-- Stats -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem;margin-bottom:4rem">
       <div class="todays-prayer-widget" style="padding:2rem 1.5rem">
-        <div style="font-size:2.5rem;font-family:var(--font-cinzel);font-weight:700">32+</div>
+        <div style="font-size:2.5rem;font-family:var(--font-cinzel);font-weight:700">100+</div>
         <div style="font-size:0.9rem;opacity:0.9;margin-top:0.3rem">Sacred Prayers</div>
       </div>
       <div class="todays-prayer-widget" style="padding:2rem 1.5rem">
@@ -131,23 +151,23 @@
     <div class="category-cards" style="margin-bottom:4rem">
       <a href="aarti.html" class="category-card">
         <span class="cat-icon">🪔</span>
-        <h3>20+ Aarti</h3>
-        <p>Ganesh, Shiv, Lakshmi, Hanuman, Durga and more</p>
+        <h3>25+ Aarti</h3>
+        <p>Ganesh, Shiv, Lakshmi, Hanuman, Durga & more</p>
       </a>
       <a href="chalisa.html" class="category-card">
         <span class="cat-icon">🙏</span>
-        <h3>3 Chalisa</h3>
-        <p>Hanuman, Durga, Shiv Chalisa in full</p>
+        <h3>12+ Chalisa</h3>
+        <p>Hanuman, Durga, Shiv, Lakshmi Chalisa & more</p>
       </a>
       <a href="mantra.html" class="category-card">
         <span class="cat-icon">🕉️</span>
-        <h3>Mantras</h3>
-        <p>Gayatri, Mahamrityunjaya, Ram Stuti</p>
+        <h3>15+ Mantras</h3>
+        <p>Gayatri, Mahamrityunjaya, Shanti Mantras & more</p>
       </a>
       <a href="pooja.html" class="category-card">
         <span class="cat-icon">🌸</span>
-        <h3>Pooja Path</h3>
-        <p>Complete puja vidhi for major occasions</p>
+        <h3>8+ Pooja Vidhi</h3>
+        <p>Complete puja rituals for major Hindu festivals</p>
       </a>
     </div>
 
@@ -166,7 +186,8 @@
   </div>
 </section>
 
-<script src="../js/nav.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/festival-calendar.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </body></html>
 

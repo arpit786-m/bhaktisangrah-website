@@ -1,10 +1,27 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Popular Prayers — Most Loved Hindu Prayers | Bhakti Sangrah</title>
-  <meta name="description" content="Most popular Hindu prayers online — Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra, Shiv Aarti and more." />
-  <meta name="keywords" content="Hindu Prayers, Aarti, Chalisa, Mantra, Bhakti Sangrah" />
+  <meta charset="UTF-8" />
+  <!-- Performance: preconnect to font servers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.youtube.com" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Most Popular Hindu Prayers — Hanuman Chalisa, Ganesh Aarti & More | Bhakti Sangrah</title>
+
+  <!-- Canonical & Open Graph Tags -->
+  <link rel="canonical" href="https://bhaktisangrah.site/pages/popular.html" />
+  <meta property="og:title" content="Most Popular Hindu Prayers — Hanuman Chalisa, Ganesh Aarti & More | Bhakti Sangrah" />
+  <meta property="og:description" content="⭐ India's most loved Hindu prayers in one place. Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra, Shiv Aarti and more. Trusted by thousands of devotees daily." />
+  <meta property="og:url" content="https://bhaktisangrah.site/pages/popular.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta property="og:site_name" content="Bhakti Sangrah" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Most Popular Hindu Prayers — Hanuman Chalisa, Ganesh Aarti & More | Bhakti Sangrah" />
+  <meta name="twitter:description" content="⭐ India's most loved Hindu prayers in one place. Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra, Shiv Aarti and more. Trusted by thousands of devotees daily." />
+  <meta name="twitter:image" content="https://bhaktisangrah.site/images/og-image.jpg" />
+  <meta name="description" content="⭐ India's most loved Hindu prayers in one place. Hanuman Chalisa, Ganesh Aarti, Gayatri Mantra, Shiv Aarti and more. Trusted by thousands of devotees daily." />
+  <meta name="keywords" content="popular Hindu prayers, hanuman chalisa, ganesh aarti, gayatri mantra, most recited prayers India" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
 
@@ -35,29 +52,22 @@
   </script>
 </head>
 <body>
+<!-- Festival Banner (above everything) -->
+<div id="festivalBanner" role="banner" aria-label="Festival announcement" style="display:none;"></div>
+
 <nav class="navbar"><div class="container">
-  <a href="../index.html" class="nav-brand"><span class="logo-icon">🕉️</span><div><span class="brand-name">Bhakti Sangrah</span><span class="brand-sub">भक्ति संग्रह</span></div></a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li><li><a href="aarti.html">Aarti</a></li>
-    <li><a href="chalisa.html">Chalisa</a></li><li><a href="mantra.html">Mantra</a></li>
-    <li><a href="pooja.html">Pooja Path</a></li><li><a href="popular.html" class="active">Popular</a></li>
-    <li><a href="favourites.html">Favourites</a></li><li><a href="about.html">About</a></li>
-  </ul>
+  <a href="../index.html" class="nav-brand"><span class="logo-icon">🕉️</span><div><span class="brand-name">Bhakti Sangrah</span></div></a>
+  <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../pages/aarti.html">Aarti</a></li><li><a href="../pages/chalisa.html">Chalisa</a></li><li><a href="../pages/mantra.html">Mantra</a></li><li><a href="../pages/stotra.html">Stotra</a></li><li><a href="../pages/bhajan.html">Bhajan</a></li><li><a href="../pages/stuti.html">Stuti</a></li><li><a href="../pages/pooja.html">Pooja Path</a></li><li><a href="../pages/popular.html">Popular</a></li><li><a href="../pages/favourites.html">Favourites</a></li><li><a href="../pages/about.html">About</a></li></ul>
   <div class="nav-actions">
-    <button class="icon-btn theme-toggle">🌙</button>
-    <button class="icon-btn open-search">🔍</button>
-    <button class="icon-btn" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="icon-btn theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+    <button class="icon-btn open-search" aria-label="Open search">🔍</button>
+    <button class="icon-btn" id="hamburger" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
   </div>
 </div></nav>
 <div class="nav-overlay" id="navOverlay"></div>
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-header"><span style="font-family:var(--font-serif);color:var(--saffron)">🕉️ Menu</span><button class="icon-btn" id="closeNav">✕</button></div>
-  <ul class="mobile-nav-links">
-    <li><a href="../index.html">🏠 Home</a></li><li><a href="aarti.html">🪔 Aarti</a></li>
-    <li><a href="chalisa.html">🙏 Chalisa</a></li><li><a href="mantra.html">🕉️ Mantra</a></li>
-    <li><a href="pooja.html">🌸 Pooja Path</a></li><li><a href="popular.html" class="active">⭐ Popular</a></li>
-    <li><a href="favourites.html">❤️ Favourites</a></li><li><a href="about.html">ℹ️ About</a></li>
-  </ul>
+  <ul class="mobile-nav-links"><li><a href="../index.html">🏠 Home</a></li><li><a href="../pages/aarti.html">🪔 Aarti</a></li><li><a href="../pages/chalisa.html">🙏 Chalisa</a></li><li><a href="../pages/mantra.html">🕉️ Mantra</a></li><li><a href="../pages/stotra.html">📿 Stotra</a></li><li><a href="../pages/bhajan.html">🎵 Bhajan</a></li><li><a href="../pages/stuti.html">🙌 Stuti</a></li><li><a href="../pages/pooja.html">🌸 Pooja Path</a></li><li><a href="../pages/popular.html">⭐ Popular</a></li><li><a href="../pages/favourites.html">❤️ Favourites</a></li><li><a href="../pages/about.html">ℹ️ About</a></li></ul>
 </div>
 <div class="search-overlay" id="searchOverlay"><div class="search-modal"><div class="search-modal-inner"><div class="search-modal-input"><span>🔍</span><input type="text" id="searchInput" placeholder="Search prayers..." autocomplete="off" /><button class="icon-btn" id="closeSearch">✕</button></div></div><div class="search-results-list" id="searchResultsList"></div></div></div>
 
@@ -71,13 +81,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>⭐ Most Beloved Prayers</h2>
-      <div class="divider"></div>
-      <p>Start your spiritual journey with these timeless devotional classics</p>
-    </div>
-
-    <!-- Featured Top Prayer -->
+    <!-- Hanuman Chalisa always at #1 -->
     <div style="background:var(--gradient-hero);border-radius:var(--radius-xl);padding:2.5rem;margin-bottom:3rem;color:white;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
       <div style="font-size:5rem;flex-shrink:0;">🙏</div>
       <div style="flex:1;min-width:200px;">
@@ -89,75 +93,78 @@
       </div>
     </div>
 
-    <div class="cards-grid">
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#FF8C3822,#FF8C3866);position:relative"><img src="../images/ganesha.png" alt="Ganesha" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5"><span style="position:relative;z-index:1;font-size:2.5rem">🙏</span></div>
-        <div class="card-body">
-          <span class="card-badge badge-aarti">Aarti</span>
-          <h3>Ganesh Aarti</h3>
-          <p style="font-family:var(--font-hindi)">जय गणेश जय गणेश देवा</p>
-          <p>Begin every auspicious occasion with this beloved Aarti of Lord Ganesha</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/aarti/ganesh-aarti.html">Read Now →</a><button class="fav-btn" data-id="ganesh-aarti">🤍</button></div>
-      </div>
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#2E7D3222,#2E7D3266)">☀️</div>
-        <div class="card-body">
-          <span class="card-badge badge-mantra">Mantra</span>
-          <h3>Gayatri Mantra</h3>
-          <p style="font-family:var(--font-hindi)">ॐ भूर्भुवः स्वः</p>
-          <p>The supreme Vedic mantra recited at sunrise for divine wisdom and enlightenment</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/mantra/gayatri-mantra.html">Read Now →</a><button class="fav-btn" data-id="gayatri-mantra">🤍</button></div>
-      </div>
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#1A6BB522,#1A6BB566);position:relative"><img src="../images/shiva.png" alt="Shiv" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5"><span style="position:relative;z-index:1;font-size:2.5rem">🔱</span></div>
-        <div class="card-body">
-          <span class="card-badge badge-aarti">Aarti</span>
-          <h3>Shiv Aarti</h3>
-          <p style="font-family:var(--font-hindi)">ॐ जय शिव ओंकारा</p>
-          <p>The most popular Shiva aarti sung in households and temples across India</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/aarti/shiv-aarti.html">Read Now →</a><button class="fav-btn" data-id="shiv-aarti">🤍</button></div>
-      </div>
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#C6282822,#C6282866);position:relative"><img src="../images/durga.png" alt="Durga" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5"><span style="position:relative;z-index:1;font-size:2.5rem">🌺</span></div>
-        <div class="card-body">
-          <span class="card-badge badge-aarti">Aarti</span>
-          <h3>Durga Aarti</h3>
-          <p style="font-family:var(--font-hindi)">जय अम्बे गौरी</p>
-          <p>Powerful Durga aarti especially recited during Navratri for blessings</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/aarti/durga-aarti.html">Read Now →</a><button class="fav-btn" data-id="durga-aarti">🤍</button></div>
-      </div>
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#F5A62322,#F5A62366);position:relative"><img src="../images/lakshmi.png" alt="Lakshmi" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5"><span style="position:relative;z-index:1;font-size:2.5rem">🪔</span></div>
-        <div class="card-body">
-          <span class="card-badge badge-aarti">Aarti</span>
-          <h3>Lakshmi Aarti</h3>
-          <p style="font-family:var(--font-hindi)">ॐ जय लक्ष्मी माता</p>
-          <p>Essential aarti for prosperity chanted on Diwali and every Friday evening</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/aarti/lakshmi-aarti.html">Read Now →</a><button class="fav-btn" data-id="lakshmi-aarti">🤍</button></div>
-      </div>
-      <div class="prayer-card visible">
-        <div class="card-thumb" style="background:linear-gradient(135deg,#6A1B9A22,#6A1B9A66)">🕉️</div>
-        <div class="card-body">
-          <span class="card-badge badge-mantra">Mantra</span>
-          <h3>Mahamrityunjaya Mantra</h3>
-          <p style="font-family:var(--font-hindi)">महामृत्युंजय मंत्र</p>
-          <p>Ancient healing mantra of Lord Shiva chanted for good health and longevity</p>
-        </div>
-        <div class="card-footer"><a href="../prayers/mantra/mahamrityunjaya-mantra.html">Read Now →</a><button class="fav-btn" data-id="mahamrityunjaya-mantra">🤍</button></div>
-      </div>
+    <!-- Section header updated daily -->
+    <div class="section-header" style="margin-bottom:2rem">
+      <h2 id="popularHeading">⭐ Today's Popular Prayers</h2>
+      <div class="divider"></div>
+      <p id="popularSubheading">Refreshed daily — come back tomorrow for a new selection</p>
     </div>
+
+    <!-- Cards injected by JS daily rotation -->
+    <div class="cards-grid" id="popularGrid"></div>
   </div>
 </section>
 
 
 
-<script src="../js/nav.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/nav.js" defer></script>
+<script src="../js/festival-calendar.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script>
+  // Daily rotating popular prayers — seeded by today's date so same day = same 6 prayers
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof PRAYERS === 'undefined') return; // wait for main.js
+
+    // Date seed: e.g. 20260318
+    const d = new Date();
+    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+
+    // Seeded pseudo-random (mulberry32)
+    function seededRand(s) {
+      return function() { s |= 0; s = s + 0x6D2B79F5 | 0;
+        let t = Math.imul(s ^ s >>> 15, 1 | s);
+        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+        return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    const rand = seededRand(seed);
+
+    // Shuffle (exclude hanuman-chalisa — already pinned at #1)
+    const pool = PRAYERS.filter(p => p.id !== 'hanuman-chalisa');
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const daily6 = pool.slice(0, 6);
+
+    // Update heading with today's date
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    document.getElementById('popularHeading').textContent =
+      `⭐ ${dayNames[d.getDay()]}'s Popular Prayers`;
+
+    // Emit cards
+    const catEmoji = { aarti:'🪔', chalisa:'🙏', mantra:'🕉️', stotra:'📿', bhajan:'🎵', stuti:'🙌', pooja:'🌸' };
+    const catColors = { aarti:'#FF8C38', chalisa:'#FF6B00', mantra:'#2E7D32', stotra:'#1A6BB5', bhajan:'#6A1B9A', stuti:'#C62828', pooja:'#E65100' };
+    const grid = document.getElementById('popularGrid');
+    if (!grid) return;
+    grid.innerHTML = daily6.map(p => {
+      const emoji = catEmoji[p.category] || '🙏';
+      const clr = catColors[p.category] || '#FF6B00';
+      const badge = p.category.charAt(0).toUpperCase() + p.category.slice(1);
+      return `<div class="prayer-card visible">
+        <div class="card-thumb" style="background:linear-gradient(135deg,${clr}22,${clr}66)">${emoji}</div>
+        <div class="card-body">
+          <span class="card-badge badge-${p.category}">${badge}</span>
+          <h3>${p.title}</h3>
+          <p style="font-family:var(--font-hindi)">${p.titleHi}</p>
+          <p>${p.description}</p>
+        </div>
+        <div class="card-footer"><a href="${p.path}">Read Now →</a><button class="fav-btn" data-id="${p.id}">🤍</button></div>
+      </div>`;
+    }).join('');
+
+    // Re-init fav buttons
+    if (typeof initFavButtons === 'function') initFavButtons();
+  });
+</script>
 </body></html>
 
 
