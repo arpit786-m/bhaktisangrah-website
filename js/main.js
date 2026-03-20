@@ -404,8 +404,9 @@ function initHinduCalendar() {
   const el = document.getElementById('hinduCalendar');
   if (!el) return;
   const now = new Date();
-  const vikramYear = now.getFullYear() + 57;
-  const vikramMonth = VIKRAM_MONTHS[(now.getMonth() + 1) % 12];
+  const vikramYear = now.getFullYear() + (now.getMonth() >= 2 ? 57 : 56);
+  // Shift by 10 to align March (2) with Chaitra (0)
+  const vikramMonth = VIKRAM_MONTHS[(now.getMonth() + 10) % 12];
   const paksha = now.getDate() <= 15 ? 'शुक्ल पक्ष' : 'कृष्ण पक्ष';
   const tithi = Math.floor((now.getDate() % 15) + 1);
   const tithiNames = ['प्रतिपदा','द्वितीया','तृतीया','चतुर्थी','पंचमी','षष्ठी','सप्तमी','अष्टमी','नवमी','दशमी','एकादशी','द्वादशी','त्रयोदशी','चतुर्दशी','पूर्णिमा/अमावस्या'];

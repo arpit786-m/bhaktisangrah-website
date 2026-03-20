@@ -3,7 +3,7 @@
    Modern Glassmorphism Devotional Design
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+/* Google Fonts moved to HTML head for Performance */
 
 /* --- CSS Variables --- */
 :root {
@@ -160,7 +160,7 @@ p { color: var(--text-secondary); }
 }
 .hero-image-overlay {
   position: absolute; inset: 0; z-index: 0;
-  background: url('../images/temple-hero.png') center/cover no-repeat;
+  background: url('../images/temple-hero.webp') center/cover no-repeat;
   opacity: 0.15;
   mix-blend-mode: overlay;
 }
