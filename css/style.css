@@ -160,7 +160,7 @@ p { color: var(--text-secondary); }
 }
 .hero-image-overlay {
   position: absolute; inset: 0; z-index: 0;
-  background: url('../images/temple-hero.webp') center/cover no-repeat;
+  background: url('../images/temple-hero.png') center/cover no-repeat;
   opacity: 0.15;
   mix-blend-mode: overlay;
 }
