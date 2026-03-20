@@ -453,10 +453,13 @@ function initFestivalBanner() {
     </div>`;
   bannerEl.style.display = 'block';
 
-  // Push navbar down by banner height
+  // Push navbar down by banner height using CSS variable
   const nav = document.querySelector('.navbar');
   const bannerH = bannerEl.offsetHeight;
-  if (nav) nav.style.top = bannerH + 'px';
+  if (bannerH > 0) {
+    document.documentElement.style.setProperty('--banner-height', bannerH + 'px');
+    document.body.classList.add('festival-active');
+  }
 
   // Close button — removes banner from page; reappears on next page load
   document.getElementById('festivalBannerClose').addEventListener('click', () => {
@@ -464,9 +467,11 @@ function initFestivalBanner() {
     bannerEl.style.opacity = '0';
     setTimeout(() => {
       bannerEl.remove();
+      document.body.classList.remove('festival-active');
+      document.documentElement.style.setProperty('--banner-height', '0px');
       if (nav) {
         nav.style.transition = 'top 0.3s ease';
-        nav.style.top = '0';
+        // nav.style.top = '0'; // Now handled by CSS variable
         setTimeout(() => { nav.style.transition = ''; }, 350);
       }
     }, 280);
