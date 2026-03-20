@@ -65,7 +65,12 @@
         <button class="icon-btn" id="hamburger" title="Menu" aria-label="Open mobile navigation"><span></span><span></span><span></span></button>
       </div>
     </div>`;
-    document.body.insertBefore(nav, document.body.firstChild);
+    const fb = document.getElementById('festivalBanner');
+    if (fb) {
+      fb.parentNode.insertBefore(nav, fb.nextSibling);
+    } else {
+      document.body.insertBefore(nav, document.body.firstChild);
+    }
   } else {
     /* update existing navbar to use shared roots */
     document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(a => {
